@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Browser Event example</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Browser Event example</h2>
+      <img src="http://surl.li/asxru" alt="banner" id="bannerimg" />
+      <article>
+        <h1>some content</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum earum
+          laborum odit repellendus cumque iste consequuntur reiciendis assumenda
+          voluptates voluptas ratione natus officiis consequatur vero saepe, qui
+          atque amet minima voluptatibus ducimus expedita quia. Earum, illum ea
+          modi suscipit expedita officia fugit sequi incidunt sapiente
+          consectetur dicta, corporis ex cumque laudantium impedit dolor
+          voluptatibus ipsum quas eaque deleniti facere itaque voluptate. Fugit
+          esse molestias ab saepe ipsa, sunt vel amet consequuntur quasi, quas
+          magni ex? Consectetur natus in fuga blanditiis possimus eveniet
+          voluptatum deleniti aut numquam repellendus, beatae officiis quo dolor
+          minima eius amet fugit voluptas aperiam exercitationem vero nobis
+          dolores commodi nisi. Quibusdam labore tempora nemo commodi assumenda,
+          laudantium dolor voluptas, voluptatem architecto possimus eos odit
+          illum quam, quas unde voluptas, voluptatem architecto possimus eos
+          odit illum quam, quas unde et aliquid debitis at asperiores
+          repudiandae vitae! Eveniet blanditiis et aliquid debitis at asperiores
+          repudiandae vitae! Eveniet blanditiis reiciendis dolores nemo
+          inventore assumenda molestias tempore nesciunt reiciendis dolores nemo
+          inventore assumenda molestias tempore nesciunt velit nostrum ratione
+          praesentium ipsam nihil laudantium excepturi atque velit nostrum
+          ratione praesentium ipsam nihil laudantium excepturi atque est,
+          commodi incidunt nobis perspiciatis deserunt dolor cumque. Nostrum
+          est, commodi incidunt nobis perspiciatis deserunt dolor cumque.
+          Nostrum odit eaque possimus nobis minus quibusdam, blanditiis deleniti
+          doloribus odit eaque possimus nobis minus quibusdam, blanditiis
+          deleniti doloribus voluptas, voluptatem architecto possimus eos odit
+          illum quam, quas unde voluptas, voluptatem architecto possimus eos
+          odit illum quam, quas unde et aliquid debitis at asperiores
+          repudiandae vitae! Eveniet blanditiis et aliquid debitis at asperiores
+          repudiandae vitae! Eveniet blanditiis reiciendis dolores nemo
+          inventore assumenda molestias tempore nesciunt reiciendis dolores nemo
+          inventore assumenda molestias tempore nesciunt velit nostrum ratione
+          praesentium ipsam nihil laudantium excepturi atque velit nostrum
+          ratione praesentium ipsam nihil laudantium excepturi atque est,
+          commodi incidunt nobis perspiciatis deserunt dolor cumque. Nostrum
+          est, commodi incidunt nobis perspiciatis deserunt dolor cumque.
+          Nostrum odit eaque possimus nobis minus quibusdam, blanditiis deleniti
+          doloribus odit eaque possimus nobis minus quibusdam, blanditiis
+          deleniti doloribus velit, tempore laborum in pariatur exercitationem
+          quam porro sint soluta, animi sed. Ipsa, a harum ex vel quo explicabo
+          quasi maxime beatae libero, perferendis neque soluta omnis quibusdam
+          corrupti. Architecto aliquam facilis asperiores sequi necessitatibus?
+        </p>
+      </article>
+    </div>
+    <script>
+      $(window).resize(function () {
+        if (this.resizeTO) clearTimeout(this.resizeTO);
+        this.resizeTO = setTimeout(function () {
+          $(this).trigger("resizeEnd");
+        }, 500);
+      });
+      $(function () {
+        $(window).resize(function () {
+          $("#bannerimg").fadeOut();
+        });
+        $(window).bind("resizeEnd", function () {
+          $("#bannerimg").fadeIn();
+        });
+
+        $(window).scroll(function () {
+          if (
+            document.body.scrollTop > 500 ||
+            document.documentElement.scrollTop > 500
+          ) {
+            $("article").slideUp(5000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Single And Double CLick events</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Single And Double Click Event Example</h2>
+      <p id="para1" class="formContainer">Click to see action</p>
+      <p id="para2" class="formContainer">Doble click here to see magic</p>
+    </div>
+    <script>
+      $(function () {
+        // $("#para1").click(function () {
+        //   alert("SIngle Click event");
+        // });
+        $("#para1").on("click", function () {
+          alert("SIngle Click event");
+        });
+        $("#para2").dblclick(function () {
+          $("#para1")
+            .css("background-color", "lightblue")
+            .text("double clicked");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Blur Focus With JQuery</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="formContainer">
+        <h1>Techinfoyt</h1>
+        <span>Please Sign In to your account</span>
+        <form action="#">
+          <label for="uname">Username</label>
+          <input type="text" id="uname" />
+          <br />
+          <label for="pass">Password</label>
+          <input type="password" id="pass" />
+          <p id="passhint">Note : use alphabets and number</p>
+          <p id="passMsg"></p>
+          <p>New to Techinfoyt , <u>Register Here</u> !</p>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $("form").submit(function () {
+          let uname = $("#uname").val();
+          let pass = $("#pass").val();
+          if (uname == "admin" && pass == "12345678") {
+            alert("Login Success");
+          } else {
+            alert("Login Fail");
+          }
+        });
+        $("#passhint").hide();
+        $("input")
+          .focus(function () {
+            $(this).css("background-color", "yellow");
+          })
+          .blur(function () {
+            $(this).css("background-color", "white");
+          });
+
+        $("input:last")
+          .focus(function () {
+            $("#passhint").slideDown();
+          })
+          .blur(function () {
+            $("#passhint").slideUp();
+          })
+          .change(function () {
+            let passSize = $("input:last").val();
+            if (passSize.length < 8) {
+              $("#passMsg").text("Your Passoword must be 8 char long");
+            } else {
+              $("#passMsg").text("");
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

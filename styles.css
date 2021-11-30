@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.box1 {
+  background-color: lightblue;
+  padding: 30px;
+  border: 1px solid blue;
+  margin-top: 20px;
+}
+.box2 {
+  background-color: lightblue;
+  padding: 30px;
+  border: 1px solid blue;
+  margin-top: 20px;
+}
+.box3 {
+  background-color: lightblue;
+  padding: 30px;
+  border: 1px solid blue;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* for table td */
+table td {
+  padding: 10px;
+}
+
+/* for hover effect */
+.over {
+  background-color: lightcoral;
+}
+
+/* for click event */
+.clicked {
+  background-color: blue;
+  color: white;
+}
+
+/* form styling */
+.formContainer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid gray;
+  box-shadow: 2px 3px;
+  padding: 20px;
+}
+.formContainer h1 {
+  font-family: cursive;
+}
+#passhint {
+  color: red;
+}
+.formContainer input {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.formContainer button {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 300px;
+  padding: 8px;
+}

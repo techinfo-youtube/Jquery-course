@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Slide Effects tutorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading">BOX 1</h1>
+      <p id="para" style="display: none">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis
+        quibusdam dolores accusantium rerum illum cumque ipsa obcaecati? Id
+        illum placeat deleniti at quod odio, quaerat perferendis officia
+        voluptatum cupiditate tempore, blanditiis in soluta ad dignissimos
+        assumenda cumque repellat? Praesentium omnis, repellendus vitae earum
+        rem autem possimus quam, tenetur porro hic incidunt aliquam. Deleniti
+        tenetur neque aspernatur quis quia et repudiandae libero, inventore
+        incidunt cum ipsam, a eaque quisquam nemo harum alias ab voluptas
+        dolorema laborum pariatur laboriosam optio quidem unde temporibus
+        dignissimos tempore commodi reiciendis, consectetur
+      </p>
+    </div>
+
+    <script>
+      $(function () {
+        $("#heading").click(function () {
+          $("#para").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Append And Prepend</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Before|After, Append|Prepend example</h2>
+      <span>Click me</span>
+    </div>
+
+    <script>
+      $(function () {
+        $("span").one("click", function () {
+          $(this).prepend("<h1>Before example</h1>");
+          $(this).append("<h1>After example</h1>");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jquery tutorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <h1 id="h1A">Box 1</h1>
+        <p id="pA">some content p1</p>
+      </div>
+      <div class="box2" id="Box2Id">
+        <h1 id="h1B">Box 2</h1>
+        <p id="pB">some content p2</p>
+      </div>
+      <div class="box3">
+        <h1 id="h1C">Box 3</h1>
+        <p id="pC">some content p3</p>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        // $("div").css("color", "red"); // Select an Element
+        // $("#Box2Id").css("background-color", "red"); //ID
+        // $(".box3").css("background-color", "orange");
+        // $(".box3 > p").remove();
+        $("h1:even").css("background-color", "red");
+      });
+    </script>
+  </body>
+</html>
